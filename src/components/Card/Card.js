@@ -29,7 +29,7 @@ function CardComponent() {
                     image={item.thumbnail}
                   ></CardMedia>
                   <CardContent>
-                    <Typography gutterBottom variant='h5' component='div' sx={{height:"100px"}}> {item.title} </Typography>
+                    <Typography gutterBottom variant='h5' component='div' sx={{height:"80px"}}> {item.title} </Typography>
                     <Box
                       sx={{
                         display: 'flex',
@@ -43,9 +43,9 @@ function CardComponent() {
                       <Box component="span" fontWeight="bold" fontSize='150%' color='black'>${item.price - (item.price * (item.discountPercentage / 100)).toFixed()}</Box>
                       <>
                         {' '}
-                        <Box component="span" color="text.secondary" textDecoration="line-through"><del>{item.price}</del></Box>
+                        <Box component="span" color="text.secondary" textDecoration="line-through"><del>${item.price}</del></Box>
                         {' '}
-                        <Box component="span" color="error.main">({item.discountPercentage}% off)</Box>
+                        <Box component="span" color="error.main">({(item.discountPercentage).toFixed(0)}% off)</Box>
                       </>
                     </Typography>
                   </CardContent>

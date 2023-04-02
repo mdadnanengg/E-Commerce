@@ -2,6 +2,7 @@ import { AppBar, Button, Tab, Tabs, Toolbar, Typography, useMediaQuery, useTheme
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useState } from "react";
 import MobileNavBar from "./MobileNavBar";
+// import ShoppingCartCheckoutRoundedIcon from '@mui/icons-material/ShoppingCartCheckoutRounded';
 
 const PAGES = ["Home", "Products", "About", "Contact"]
 
@@ -13,8 +14,8 @@ function NavigationBar() {
   console.log(isMatch)
   return (
     <>
-      <AppBar>
-        <Toolbar sx={{ background: "white" }}>
+      <AppBar sx={{background:"white"}}>
+        <Toolbar sx={{ background: "white", marginLeft:"30px", marginRight:"30px"}}>
           { isMatch ? (
             <>
             <MobileNavBar/>
